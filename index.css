@@ -51,9 +51,29 @@ header{
 }
 .main-section{
     padding:0 100px;
+    position:relative;
+    @media screen and (max-width:767px){
+        padding:0 20px;
+    }
+    .yellow{
+        width:67%;
+        max-width:1000px;
+        height:222px;
+        background-color:#f1c50e ;
+        position:absolute;
+        left:0;
+        top:0;
+        z-index:-1;
+        @media screen and (max-width:767px){
+            width:100%;
+            height:325px;
+            top:325px;
+        }
+    }
     .container{
         height:800px;
         display: flex;
+        flex-wrap: wrap;
         align-items: start;
         padding-bottom:60px;
         .main{
@@ -62,24 +82,37 @@ header{
             flex-direction: row;
             align-items: center;
             width:70%;
+            @media screen and (max-width:767px){
+                width:100%;
+            }
+            
             .food-bg{
                 width:50%;
                 height:525px;
                 background-image: url(./images/food.jpg);
                 background-position: center;
                 background-size:cover; 
+                @media screen and (max-width:767px){
+                width:100%;
+                padding:0;
+                }
             }
             .content{
                 width:50%;
                 padding:30px;
                 display: flex;
                 flex-direction: column;
-                gap:30px;
+                gap:50px;
+                @media screen and (max-width:767px){
+                width:100%;
+                }
+                /* margin-top:50px; */
                 h2{
                     font-size: 6rem;
                     font-weight: 900;
                 }
                 p{
+                    /* width:321px; */
                     line-height: 2;
                     font-weight: 700;
                     font-size: 1.125rem;
@@ -87,17 +120,226 @@ header{
                 a{
                     color:#fe7606;
                 }
+                
+            }
+            .span-black{
+                    width:250px;
+                    height:64px;
+                    background-color: black;
+                    margin-left:calc(50% + 30px);
+                    @media screen and (max-width:767px){
+                        margin-left:30px;;
+                        margin-bottom:30px;
+                    }
+                }
+        }
+        .menu-image{
+            width:30%;
+            /* padding:30px; */
+            position: relative;
+            align-self: flex-end;
+            @media screen and (max-width:767px){
+                width:100%;
+            }
+            .image-span{
+                width:100%;
+                height:250px;
+                background-color: #fe7606;
+                position: absolute;
+                top:50px;
+                right:-100px;
+                z-index:-1;
+                @media screen and (max-width:767px) {
+                    right:-20px;
+                }
+            }
+            .coffe-bg{
+                width:100%;
+                height:525px;
+                background-image: url(./images/coffe.jpg);
+                background-position: center;
+                background-size: cover;
+                
+            }
+           
+            
+        
+            
+
+        }
+    }
+}
+.learn-cooking{
+    background-image: url(./images/OG9KN00j-min.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media screen and (max-width:992px) {
+        margin-top:150px;
+    }
+    @media screen and (max-width:767px) {
+        margin-top:1000px;
+    }
+    .container{
+        padding:100px 0;
+        display: flex;
+        flex-wrap:wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap:20px;
+        .content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap:20px;
+            h1{
+                font-size: clamp(1rem, 5vw, 4.5rem);
+                margin: 60px auto 0;
+                color: #fe7606;
+                line-height: 1.1;
+                font-weight: 400;
+            } 
+            p{
+                font-size:1.125rem;
+                width: 646px;
+                font-style: italic;
+                margin: 20px auto 0;
+                color:rgb(255, 251, 251);
+                text-align: center;
+                @media screen and (max-width:767px) {
+                    font-size: 20px;
+                    width:330px;
+                }
+            }  
+            span{
+                font-size: 1rem;
+                text-transform: uppercase;
+                color:white;
+            }
+            a{
+                color: #e96a01;
             }
         }
-        .coffe-bg{
-            width:30%;
-            height:525px;
-            padding:30px;
-            background-image: url(./images/coffe.jpg);
-            background-position: center;
-            background-size: cover;
-            align-self: flex-end;
+        .cards{
+            width:80%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap:2%;
+            @media screen and (max-width:767px) {
+                width:100%;
+                padding:0 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap:20px;
+            }
+            .son{
+                display: flex;
+                flex-direction: column;
+                gap:18px;
+                width:calc(96%/3);
+                padding:30px;
+                @media screen and (max-width:767px) {
+                    width:80%;
+                }
+                h2{
+                    font-size: 8rem;
+                    line-height: 1;
+                    font-weight: 400;
+                }
+                h3{
+                    font-size: 2.25rem;
+                    margin: 18px 0 0;
+                }
+                p{
+                    font-size: 1.125rem;
+                }
+                a{
+                    color:#fe7606;
+                    border-bottom:2px solid #fe7606;
+                    font-weight: 700;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    margin: 20px auto 0 0;
+                    padding-bottom:x;
+                }
+            }
         }
-
     }
+
+}
+.twocolor{
+    width:100%;
+    height:615px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    
+    .white{
+        
+        width:50%;
+        background-color:white;
+        padding-top:60px;
+        display: flex;
+        flex-direction: column;
+        align-content: flex-end;
+        flex-wrap: wrap;
+        @media screen and (max-width:767px){
+            position: relative;
+        }
+        
+        h2{
+            font-weight: 700;
+            font-size: clamp(3rem, 5vw, 4.5rem);;
+            margin: 0 auto;
+            padding-bottom:30px;
+            
+        }
+        p{
+            width:311.5px;
+            font-size: 1.125rem;
+            line-height: 1.6;
+            text-align: center;
+            padding-right: 20px;
+            @media screen and (max-width:767px){
+                position: absolute;
+                top: 200px;
+                left: 42px;
+                z-index:1;
+            }
+        }
+    }
+    .orange{
+        width:50%;
+        text-align: left;
+        background-color:#f1c50e;
+        padding-top:60px;
+        padding-left: 20px;
+        @media screen and (max-width:767px){
+            position: relative;
+        }
+        h2{
+            font-weight: 700;
+            font-size: clamp(3rem, 5vw, 4.5rem);
+            margin: 0 auto;
+            padding-bottom:30px;
+        }
+        p{
+            width:311.5px;
+            font-size: 1.125rem;
+            text-align: center;
+            line-height: 1.6;
+            @media screen and (max-width:767px){
+                position: absolute;
+                top: 374px;
+                left: -170px;
+            }
+            
+        }
+    }
+
 }
